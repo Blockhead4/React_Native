@@ -8,9 +8,9 @@ export default class Insert extends Component {
         <View style={styles.container}>
           <Text>{this.props.text}</Text>
         </View>
-        {/* <View style={styles.rendering}>
-          <Text>{this.props.rend}</Text>
-        </View> */}
+        <View style={styles.rendering}>
+          <Text style={{ textAlign: "center" }}>{this.props.rend}</Text>
+        </View>
       </Fragment>
     );
   }
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   rendering: {
+    flex: 1,
     fontSize: 30,
     fontWeight: "bold",
     justifyContent: "center",

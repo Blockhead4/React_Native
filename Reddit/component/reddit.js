@@ -30,8 +30,8 @@ export default class Reddit extends Component {
     const contents = this.state.reddit.map(object => {
       return (
         <Fragment key={object.data.id}>
-          {/* <Insert text={object.data.id} />
-          <Insert text={object.data.title} /> */}
+          <Insert text={object.data.id} />
+          <Insert text={object.data.title} />
           <View>
             <Image
               source={{
@@ -53,8 +53,7 @@ export default class Reddit extends Component {
   render() {
     return (
       <ScrollView>
-        {this.state.reddit} ? ( this.renderInfo() ) : (
-        <Insert text="rendering..." />)
+        {this.state.reddit ? this.renderInfo() : <Insert rend="rendering..." />}
       </ScrollView>
     );
   }
